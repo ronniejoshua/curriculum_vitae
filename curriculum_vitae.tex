@@ -1,0 +1,131 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis-Styled CV
+% LaTeX Template
+% Version 1.0 (22/2/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{scrartcl}
+
+\reversemarginpar % Move the margin to the left of the page 
+
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+
+\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
+\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+
+\renewcommand{\cvheadingfont}{\LARGE\color{Green}} % Font color of your name at the top
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Blue} % Set link colors
+
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+
+\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\vspace{0.5em}} % Add some white space after each new entry
+
+\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\thispagestyle{empty} % Stop the page count at the bottom of the first page
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{cv}{\spacedallcaps{Ronnie Joshua}}\vspace{1.5em} % Your name
+
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{1em} % Personal information heading
+
+\NewEntry{linkedin}{\href{https://www.linkedin.com/in/ronnie-joshua/}{https://www.linkedin.com/in/ronnie-joshua/}} % Linkedin Profile
+
+\NewEntry{email}{\href{mailto:ron.juden@gmail.com}{ron.juden@gmail.com}} % Email address
+
+\NewEntry{website}{\href{http://www.webanalyticsinfo.com}{http://www.webanalyticsinfo.com}} % Personal website
+
+\NewEntry{github}{\href{https://github.com/ronniejoshua}{https://github.com/ronniejoshua}} % Github Profile
+
+\NewEntry{phone}{(M) +972 (58) 517 1183} % Phone number(s)
+
+\vspace{1em} % Extra white space between the personal information section and goal
+
+\noindent\spacedlowsmallcaps{Area of Interest}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+
+\Description{Data Driven Digital Marketing, Web Analytics, Growth Hacking,
+Conversion Optimization, Lead Generation, Demand Generation, Attribution Modelling,
+Marketing Mix Modelling, Data Analysis & Reporting, Technical Marketing}\vspace{0.5em} % Goal text
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
+
+\NewEntry{06/2019--Present}{Data Developer/Junior Data Engineer, \textsc{Tel Aviv}}
+
+\Description{\MarginText{\textbf{abaGada Internet Ltd.}}abaGada is a leading Performance Marketing agency and part of the global Dentsu Aegis Network. abaGada manages high scale global multi-dimensional marketing activities for high profile, big brands. \newline Major Clientele: Google and Waze}
+
+\Description{Scripted extensive and robust data pipelines in Python 3 to carry out both ETL and ELT. \textbf{Wrote various Advertising API Data to Big Query Connector using Python. Platforms Include: Linkedin, Twitter, Outbrain, Snapchat, Microsoft Ads, Liftoff, Display - Video 360 and Taboola}
+}
+\Description{}
+
+\Description{Technology Stack: Google Cloud Platform(GCP) -- Extensively worked on Big Query, Cloud Storage, Compute Engine, App Engine, Cloud Functions, Cloud Scheduler, Cloud Source Repositories, Dataflow and Google Maps API -- Comfortable working in a Linux based environment -- Leveraging Apache Beam and Apache Airflow for creating and maintaining data pipelines}
+
+\Description{Scripting Languages: Python, Javascript, SQL, Google Apps Script(Google Sheets) and Shell Scripting}
+
+
+%------------------------------------------------
+
+\vspace{0.2em} % Extra space between major sections
+\Description{\MarginText{Previous Experience}{\href{https://www.linkedin.com/in/ronnie-joshua/}{Click here to see previous Experience}} }
+
+
+\vspace{0.2em} % Extra space between major sections
+\Description{\MarginText{Certifications}{\href{https://www.linkedin.com/in/ronnie-joshua/}{Click here to see Certifications}} }
+
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Education}\vspace{0.5em}
+
+\NewEntry{2004-2006}{Department of Economics, Gujarat University}
+
+\Description{\MarginText{Masters of Arts}GPA: 8.0\ \ $\cdotp$\ \ \textit{First Class Honours}\ \ $\cdotp$\ \ School: Faculty of Social Sciences}
+
+\vspace{0.5em} % Extra space between major sections
+
+%----------------------------------------------------------------------------------------
+%	COMPUTER SKILLS
+%----------------------------------------------------------------------------------------
+
+\spacedlowsmallcaps{Computer Skills}\vspace{0.5em}
+
+\Description{\MarginText{Basic}\textsc{R Programming}}
+
+\Description{\MarginText{Intermediate}\textsc{sql}, \textsc{Javascript}}
+
+\Description{\MarginText{Advanced}\textsc{python}}
+
+%------------------------------------------------
+
+\end{cv}
+\end{document}
