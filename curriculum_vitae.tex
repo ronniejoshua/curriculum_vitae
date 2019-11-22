@@ -1,130 +1,131 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Classicthesis-Styled CV
-% LaTeX Template
-% Version 1.0 (22/2/13)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Alessandro Plasmati
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+% ---------------------------------------------
 
-\documentclass{scrartcl}
+\documentclass[11pt]{scrartcl}
 
-\reversemarginpar % Move the margin to the left of the page 
+% Move the margin to the left of the page
+\reversemarginpar
 
-\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} % New command defining the margin text style
+% New command defining the margin text style
+\newcommand{\MarginText}[1]{\marginpar{\raggedleft\itshape\small#1}} 
 
-\usepackage[nochapters]{classicthesis} % Use the classicthesis style for the style of the document
-\usepackage[LabelsAligned]{currvita} % Use the currvita style for the layout of the document
+% Use the classicthesis style for the style of the document
+\usepackage[nochapters, pdfspacing]{classicthesis} 
 
-\renewcommand{\cvheadingfont}{\LARGE\color{Green}} % Font color of your name at the top
+% Use the currvita style for the layout of the document
+\usepackage[TextAligned, NoDate]{currvita} 
 
-\usepackage{hyperref} % Required for adding links	and customizing them
-\hypersetup{colorlinks, breaklinks, urlcolor=Maroon, linkcolor=Blue} % Set link colors
+% Font color of your name at the top
+\renewcommand{\cvheadingfont}{\LARGE\color{Green}}
 
-\newlength{\datebox}\settowidth{\datebox}{Spring 2011} % Set the width of the date box in each block
+% Required for adding links	and customizing them
+\usepackage{hyperref} 
 
-\newcommand{\NewEntry}[3]{\noindent\hangindent=2em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3 % Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
-\vspace{0.5em}} % Add some white space after each new entry
+% Set link colors
+\hypersetup{colorlinks, breaklinks, urlcolor=Blue, linkcolor=Blue}
 
-\newcommand{\Description}[1]{\hangindent=2em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} % Define a command for descriptions of each entry - change spacing and font sizes here
+ % Set the width of the date box in each block
+\newlength{\datebox}\settowidth{\datebox}{Spring 2011}
 
-%----------------------------------------------------------------------------------------
+% Define a command for each new block - change spacing and font sizes here: #1 is the left margin, #2 is the italic date field and #3 is the position/employer/location field
+\newcommand{\NewEntry}[3]{\noindent\hangindent=0.25em\hangafter=0 \parbox{\datebox}{\small \textit{#1}}\hspace{1.5em} #2 #3
 
+% Add some white space after each new entry
+\vspace{0.5em}}
+
+% Define a command for descriptions of each entry - change spacing and font sizes here
+\newcommand{\Description}[1]{\hangindent=0.25em\hangafter=0\noindent\raggedright\footnotesize{#1}\par\normalsize\vspace{1em}} 
+
+% ----------------------------
 \begin{document}
-
 \thispagestyle{empty} % Stop the page count at the bottom of the first page
+% ----------------------------
 
-%----------------------------------------------------------------------------------------
-%	NAME AND CONTACT INFORMATION SECTION
-%----------------------------------------------------------------------------------------
+% ---------------------
+% PERSONAL INFORMATION
+% ---------------------
 
-\begin{cv}{\spacedallcaps{Ronnie Joshua}}\vspace{1.5em} % Your name
+% Your name
+\begin{cv}{\spacedallcaps{Ronnie Joshua}}\vspace{0.5em}
 
-\noindent\spacedlowsmallcaps{Personal Information}\vspace{1em} % Personal information heading
+% Personal information heading
+\noindent\spacedlowsmallcaps{Personal Information}\vspace{1em} 
 
-\NewEntry{linkedin}{\href{https://www.linkedin.com/in/ronnie-joshua/}{https://www.linkedin.com/in/ronnie-joshua/}} % Linkedin Profile
+% Phone number(s)
+\NewEntry{phone}{(M) +972 (58) 517 1183} 
 
-\NewEntry{email}{\href{mailto:ron.juden@gmail.com}{ron.juden@gmail.com}} % Email address
+% Email address
+\NewEntry{email}{\href{mailto:ron.juden@gmail.com}{ron.juden@gmail.com}} 
 
-\NewEntry{website}{\href{http://www.webanalyticsinfo.com}{http://www.webanalyticsinfo.com}} % Personal website
+% Linkedin Profile
+\NewEntry{linkedin}{\href{https://www.linkedin.com/in/ronnie-joshua/}{https://www.linkedin.com/in/ronnie-joshua/}} 
 
-\NewEntry{github}{\href{https://github.com/ronniejoshua}{https://github.com/ronniejoshua}} % Github Profile
+ % Personal website
+\NewEntry{website}{\href{http://www.webanalyticsinfo.com}{http://www.webanalyticsinfo.com}}
 
-\NewEntry{phone}{(M) +972 (58) 517 1183} % Phone number(s)
+% Github Profile
+\NewEntry{github}{\href{https://github.com/ronniejoshua}{https://github.com/ronniejoshua}} 
 
-\vspace{1em} % Extra white space between the personal information section and goal
+% Extra white space between the personal information section and goal
+\vspace{0.5em} 
 
-\noindent\spacedlowsmallcaps{Area of Interest}\vspace{1em} % Goal heading, could be used for a quotation or short profile instead
+% Goal heading, could be used for a quotation or short profile instead
+\noindent\spacedlowsmallcaps{My Area of Interest \& Vision}\vspace{0.5em} 
 
-\Description{Data Driven Digital Marketing, Web Analytics, Growth Hacking,
-Conversion Optimization, Lead Generation, Demand Generation, Attribution Modelling,
-Marketing Mix Modelling, Data Analysis and Reporting, Technical Marketing}\vspace{0.5em} % Goal text
+% Goal text
+\Description{\textbf{Area of Interest:} Data Development \& Data Engineering, Adopting Latest ETL \& ELT Methodologies, Back-end Development in Python. \textbf{Vision:} Designing, Developing \& implementing tools \& techniques for the data-driven decision-making.}\vspace{0.5em} 
 
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCE
-%----------------------------------------------------------------------------------------
+% -----------------
+% WORK EXPERIENCES
+% ----------------
 
 \noindent\spacedlowsmallcaps{Work Experience}\vspace{1em}
 
-\NewEntry{06/2019--Present}{Data Developer/Junior Data Engineer, \textsc{Tel Aviv}}
+\MarginText{\textbf{abaGada Internet Ltd.}}
 
-\Description{\MarginText{\textbf{abaGada Internet Ltd.}}abaGada is a leading Performance Marketing agency and part of the global Dentsu Aegis Network. abaGada manages high scale global multi-dimensional marketing activities for high profile, big brands. \newline Major Clientele: Google and Waze}
+\NewEntry{\textbf{June, 2019 - Present}}{\textbf{Data Developer/Junior Data Engineer}, \textsc{Tel Aviv}}
 
-\Description{Scripted extensive and robust data pipelines in Python 3 to carry out both ETL and ELT. \textbf{Wrote various Advertising API Data to Big Query Connector using Python. Platforms Include: Linkedin, Twitter, Outbrain, Snapchat, Microsoft Ads, Liftoff, Display - Video 360 and Taboola}
+\Description{abaGada is a leading Performance Marketing agency and part of the global Dentsu Aegis Network. abaGada manages high scale global multi-dimensional marketing activities for high profile, big brands. Major Clientele: \textbf{Google \& Waze}}
+
+\Description{\textbf{\spacedallcaps{Achievements: }}\newline End to end development of extensive \& robust data pipelines in python 3 including designing, development, testing, deploying \& providing maintenance \& support. Create new and optimize existing ETL \& ELT processes. Work closely with tech teams on design and implementation of big data solutions. \newline\newline Developed Data Connectors from various Advertising Platform to Big Query in Python. \textbf{Platforms Include:} Facebook, Google Ads, Linkedin, Twitter, Outbrain, Snapchat, Microsoft Ads, Liftoff, Display \& Video 360 and Taboola.
 }
 
-\Description{Technology Stack: Google Cloud Platform(GCP) -- Extensively worked on Big Query, Cloud Storage, Compute Engine, App Engine, Cloud Functions, Cloud Scheduler, Cloud Source Repositories, Dataflow and Google Maps API -- Comfortable working in a Linux based environment -- Leveraging Apache Beam and Apache Airflow for creating and maintaining data pipelines}
+\Description{\textbf{Technology Stack:} Google Cloud Platform(GCP) -- Extensively worked on Big Query, Cloud Storage, Compute Engine, App Engine, Cloud Functions, Cloud Scheduler, Cloud Source Repositories, Dataflow. Leveraging Apache Beam \& Apache Airflow for creating and maintaining data pipelines. Comfortable working in a Linux based environment.}
 
-\Description{Scripting Languages: Python, Javascript, SQL, Google Apps Script(Google Sheets) and Shell Scripting}
-
-
-%------------------------------------------------
-
-\vspace{0.2em} % Extra space between major sections
-\Description{\MarginText{Previous Experience}{\href{https://www.linkedin.com/in/ronnie-joshua/}{Click here to see previous Experience}} }
+\Description{\textbf{Scripting Languages:} Python, Javascript, SQL, Google Apps Script(Google Sheets) \& Shell Scripting}
+% ------------------------------------------------
 
 
-\vspace{0.2em} % Extra space between major sections
-\Description{\MarginText{Certifications}{\href{https://www.linkedin.com/in/ronnie-joshua/}{Click here to see Certifications}} }
+% Extra space between major sections
+\vspace{0.25em}
+\MarginText{Previous Experiences \& Certifications}
 
+\Description{{\href{https://www.linkedin.com/in/ronnie-joshua/}{Please click here to \textbf{visit my Linked-in profile for more information} on my previous employment experiences. }} -- {\href{https://www.linkedin.com/in/ronnie-joshua/}{Please click here to \textbf{access my various course certifications}}}}
 
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Education}\vspace{0.5em}
-
-\NewEntry{2004-2006}{Department of Economics, Gujarat University}
-
-\Description{\MarginText{Masters of Arts}GPA: 8.0\ \ $\cdotp$\ \ \textit{First Class Honours}\ \ $\cdotp$\ \ School: Faculty of Social Sciences}
-
-\vspace{0.5em} % Extra space between major sections
-
-%----------------------------------------------------------------------------------------
-%	COMPUTER SKILLS
-%----------------------------------------------------------------------------------------
-
-\spacedlowsmallcaps{Computer Skills}\vspace{0.5em}
+% -----------------
+% COMPUTER SKILLS
+% ----------------
+\noindent\spacedlowsmallcaps{Computer Skills}\vspace{0.50em}
 
 \Description{\MarginText{Basic}\textsc{R Programming}}
-
 \Description{\MarginText{Intermediate}\textsc{sql}, \textsc{Javascript}}
-
 \Description{\MarginText{Advanced}\textsc{python}}
+% ----------
 
-%------------------------------------------------
+% ------------------------
+% Academic Qualifications
+% -----------------------
+\spacedlowsmallcaps{Academic Qualifications}\vspace{1em}
 
+\MarginText{\textbf{Masters of Arts}}
+
+\NewEntry{2004-2006}{Department of Economics, Gujarat University, India}
+
+\Description{\textit{\textbf{First Class Honours}}\ \ $\cdotp$\ \ School: University School of Social Sciences. 
+\newline \textbf{Major: Economic \& Financial Theory}
+\newline \textbf{Minor: Mathematical Economics, Statistics \& Econometric Methods}}
+% -------------
 \end{cv}
 \end{document}
+% -------------
